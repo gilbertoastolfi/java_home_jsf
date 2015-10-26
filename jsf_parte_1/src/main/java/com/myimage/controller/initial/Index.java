@@ -10,7 +10,7 @@ public class Index {
  
    @PostConstruct
    public void init(){
-      System.out.println("Bean executado!");
+      System.out.println("Bean executado !");
    }
  
    // mostrar na página 
