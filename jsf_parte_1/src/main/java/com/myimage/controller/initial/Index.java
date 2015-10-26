@@ -13,7 +13,7 @@ public class Index {
       System.out.println("Bean executado!");
    }
  
-   // mostrar na página
+   // mostrar na página 
    public String getMessage(){
       return "Hello World JSF!";
    }
