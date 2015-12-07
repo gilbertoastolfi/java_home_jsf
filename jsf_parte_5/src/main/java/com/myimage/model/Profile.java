@@ -12,7 +12,7 @@ import org.hibernate.annotations.NaturalId;
 public class Profile {
 
 	@Id
-	private Integer id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	@NaturalId
@@ -24,11 +24,11 @@ public class Profile {
 	@MapsId
 	private User user;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
