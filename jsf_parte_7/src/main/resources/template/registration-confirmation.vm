@@ -1,0 +1,6 @@
+<html>
+<body>
+   <h3>Olá ${profile.firstName},você registrou no MyImage.com</h3>
+   <a href="${context}public/activate.xhtml?key=${profile.user.validation}">Clique aqui para validar seu cadastro</a>.
+</body>
+</html>

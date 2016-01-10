@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html">
+ 
+<ui:composition template="/public/template_initial.xhtml">
+ 
+    <ui:define name="head">
+        <ui:fragment rendered="#{activation.valid}">
+            <meta http-equiv="refresh" content="6;url=login.xhtml" />
+        </ui:fragment>
+    </ui:define>
+     
+    <ui:define name="nav_bar">
+        <ui:include src="top_bar.xhtml" />
+        <ui:include src="search_bar.xhtml" />
+    </ui:define>
+ 
+    <ui:define name="container">
+        <div class="row">
+            <h:panelGroup layout="block" rendered="#{activation.valid}">
+                <p>Sua conta foi ativada com sucesso!</p>
+                <p>
+                    Você será encaminhado em 5 segundos para
+                    <h:link outcome="login">página de login</h:link>
+                </p>
+            </h:panelGroup>
+            <h:panelGroup layout="block" rendered="#{!activation.valid}">
+                <p>A ativação falhou! Por favor entre em seu e-mail novamente e tente mais uma vez.</p>
+                <h:form>
+                </h:form>
+            </h:panelGroup>
+        </div>
+    </ui:define>
+    <ui:define name="title">
+        Validação
+    </ui:define>
+</ui:composition>
+</html>
