@@ -19,6 +19,7 @@ public class ConectionFilter implements Filter {
  
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain) throws IOException, ServletException {
+    	
         try {
             this.sessionFactory.getCurrentSession().beginTransaction();           
             chain.doFilter(request, response);
